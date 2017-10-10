@@ -1,0 +1,37 @@
+Spring boot with security
+
+1. Jay Rajyguru and Aakruti Shah developed the whole project.
+2. Deepshikha Chauhan RnD on spring boot and security.
+
+According to our morning discussion we had implemented login and registration form using spring boot with spring security. We have focused on code more than interface. We have uses these technologies mentioned below:
+
+Spring Boot
+Spring Security
+Spring MVC
+JPA
+Thymeleaf
+Bootstrap (UI Presentation)
+Maven 
+
+
+Test cases and java doc are still pending, we will do it soon.
+In mySql our tables are described below
+
+1. ROLE
+      `role_id` int(11) NOT NULL AUTO_INCREMENT,
+       `role` varchar(255) DEFAULT NULL,
+        PRIMARY KEY (`role_id`)
+2. USER
+        `user_id` int(11) NOT NULL AUTO_INCREMENT,
+        `active` int(11) DEFAULT NULL,
+        `email` varchar(255) NOT NULL,
+         `last_name` varchar(255) NOT NULL,
+         `name` varchar(255) NOT NULL,
+          `password` varchar(255) NOT NULL,
+           PRIMARY KEY (`user_id`)
+3. USER_ROLE
+  `user_id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`,`role_id`),
+  CONSTRAINT `FK859n2jvi8ivhui0rl0esws6o` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `FKa68196081fvovjhkek5m97n3y` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`)
