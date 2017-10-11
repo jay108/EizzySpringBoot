@@ -1,4 +1,4 @@
-# SpringSecurityLoginTutorial
+# EizzySpringBoot
 
 1. mvn clean
 2. mvn clean install
